@@ -37,4 +37,7 @@ describe('String Calculator version 2 should', () => {
   it('return the same number for a number in format text', () => {
     expect(stringCalculatorV2('56')).toBe(56);
   });
+  it('return the sum for numbers separated by commas', () => {
+    expect(stringCalculatorV2('5,6')).toBe(11);
+  });
 });

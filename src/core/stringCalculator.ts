@@ -14,5 +14,9 @@ export function stringCalculatorV1(text: string, separator: string = ','): numbe
 }
 
 export function stringCalculatorV2(text: string): number {
-  return Number(text ?? '');
+  return (text ?? '')
+    .split(',')
+    .map((eachChar: string): number => Number(eachChar))
+    .filter((eachNumber: number): boolean => !isNaN(eachNumber))
+    .reduce((currentNumber: number, nextNumber: number) => currentNumber + nextNumber, 0);
 }
