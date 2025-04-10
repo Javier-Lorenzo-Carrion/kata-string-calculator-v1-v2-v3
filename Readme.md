@@ -24,3 +24,14 @@ Más información sobre el curso en [diseñosostenible.com](https://diseñososte
 ### Husky hooks
 * Pre-commit: Execute npm analize (tsc + eslint --fix)
 * Pre-push: Execute test
+
+# Requisitos de la kata
+Implementar una función que realice la suma de los caracteres que recibe como parámetros.
+
+* En el caso de recibir null o una cadena vacía devolverá cero
+* Para un numero en formato string lo convierte a un tipo numerico.
+* Para varios numeros separados por comas debe sumarlos
+* Los elementos no numericos no afectan al valor total
+* La funcion debe admitir separadores personalizados
+* Suma todos los numeros separados por un separador personalizado
+* Puede existir otro separador personalizado que vendrá definido por una doble barra inclinada seguida del simbolo que actue como separador y luego una barra inclinada para cerrar la expresion de separación seguida de los numeros con o sin separadores.
