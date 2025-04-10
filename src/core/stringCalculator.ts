@@ -1,7 +1,7 @@
 export function stringCalculatorV1(text: string): number {
   if (text === '' || text === null) return 0;
   if (text.includes(',')) {
-    text = text.replace(',', '');
+    text = text.replace(/[A-Za-z\W_]/g, '');
     let result: number = 0;
     for (let i: number = 0; i < text.length; i++) {
       result = result + Number(text.charAt(i));

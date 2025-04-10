@@ -13,4 +13,7 @@ describe('String Calculator version 1 should', () => {
   it('return the sum for numbers separated by commas', () => {
     expect(stringCalculatorV1('5,6')).toBe(11);
   });
+  it('return the sum for only numbers and ignore letters or symbols', () => {
+    expect(stringCalculatorV1('5,6,a3')).toBe(14);
+  });
 });
