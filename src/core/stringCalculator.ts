@@ -14,9 +14,6 @@ export function stringCalculatorV1(text: string, separator: string = ','): numbe
 }
 
 export function stringCalculatorV2(text: string): number {
-  try {
-    return Number(text.split(/\d/g).join(''));
-  } catch (e) {
-    return 0;
-  }
+  text = (text ?? '');
+  return Number(text);
 }
