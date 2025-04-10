@@ -5,7 +5,8 @@ export function stringCalculatorV1(text: string, separator: string = ','): numbe
     const separatedText: string[] = text.split(separator);
     let textResult: number = 0;
     for (let i: number = 0; i < separatedText.length; i++) {
-      if (Number(separatedText[i])) textResult = textResult + Number(separatedText[i]);
+      const itemIsNumber: number = Number(separatedText[i]);
+      if (itemIsNumber) textResult = textResult + itemIsNumber;
     }
     return textResult;
   }
