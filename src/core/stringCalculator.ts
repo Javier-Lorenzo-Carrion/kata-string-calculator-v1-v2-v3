@@ -12,3 +12,6 @@ export function stringCalculatorV1(text: string, separator: string = ','): numbe
   }
   return Number(text);
 }
+export function stringCalculatorV2(text: string): number {
+  return 0;
+}
