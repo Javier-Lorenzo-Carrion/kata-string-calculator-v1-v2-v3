@@ -7,4 +7,7 @@ describe('String Calculator version 1 should', () => {
   it('return 0 when the input is null', () => {
     expect(stringCalculatorV1(null)).toBe(0);
   });
+  it('return a number when the input is a number in format text', () => {
+    expect(stringCalculatorV1('56')).toBe(56);
+  });
 });
