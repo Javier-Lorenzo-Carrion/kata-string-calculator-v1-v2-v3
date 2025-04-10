@@ -40,4 +40,9 @@ describe('String Calculator version 2 should', () => {
     expect(stringCalculatorV2('5,6,a3')).toBe(11);
     expect(stringCalculatorV2('5,6,a,3')).toBe(14);
   });
+  it('return the sum for numbers separated by a symbol indicated as an input', () => {
+    expect(stringCalculatorV2('5*6*4a', '*')).toBe(11);
+    expect(stringCalculatorV2('5*6*,4a', '*')).toBe(11);
+    expect(stringCalculatorV2('5*6*,4', '*')).toBe(11);
+  });
 });
