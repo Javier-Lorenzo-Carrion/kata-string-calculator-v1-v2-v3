@@ -14,7 +14,7 @@ describe('String Calculator version 1 should', () => {
     expect(stringCalculatorV1('5,6')).toBe(11);
   });
   it('return the sum for only numbers and ignore letters or symbols', () => {
-    expect(stringCalculatorV1('5,6,a3')).toBe(14);
+    expect(stringCalculatorV1('5,6,a3')).toBe(11);
     expect(stringCalculatorV1('5,6,a,3')).toBe(14);
   });
   it('return the sum for numbers separated by a symbol indicated as an input', () => {

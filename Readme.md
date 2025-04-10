@@ -35,3 +35,14 @@ Implementar una función que realice la suma de los caracteres que recibe como p
 * La funcion debe admitir separadores personalizados
 * Suma todos los numeros separados por un separador personalizado
 * Puede existir otro separador personalizado que vendrá definido por una doble barra inclinada seguida del simbolo que actue como separador y luego una barra inclinada para cerrar la expresion de separación seguida de los numeros con o sin separadores.
+
+Ejemplos:
+
+* null -> 0
+* "" -> 0
+* "1" -> 1
+* "1,2" -> 3
+* "a" -> 0
+* "1,a" -> 1
+* "1,a,2" -> 3
+* "1a, 2" -> 2
