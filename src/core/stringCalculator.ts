@@ -1,5 +1,5 @@
 export function stringCalculatorV1(text: string): number {
-  if (text === '') return 0;
+  if (text === '' || text === null) return 0;
   if (text.includes(',')) {
     text = text.replace(',', '');
     let result: number = 0;
