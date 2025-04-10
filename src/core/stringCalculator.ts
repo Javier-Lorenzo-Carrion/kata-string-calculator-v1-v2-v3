@@ -1,5 +1,5 @@
 export function stringCalculatorV1(text: string, separator: string = ','): number {
-  if (text === '' || text === null || text.match(/\d/g) === null) return 0;
+  if (text === '' || text.match(/\d/g) === null) return 0;
 
   if (text.includes(separator)) {
     const separatedText: string[] = text.split(separator);

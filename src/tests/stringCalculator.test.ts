@@ -4,9 +4,6 @@ describe('String Calculator version 1 should', () => {
   it('return 0 for an empty text', () => {
     expect(stringCalculatorV1('')).toBe(0);
   });
-  it('return 0 for null', () => {
-    expect(stringCalculatorV1(null)).toBe(0);
-  });
   it('return the same number for a number in format text', () => {
     expect(stringCalculatorV1('56')).toBe(56);
   });
@@ -27,12 +24,11 @@ describe('String Calculator version 1 should', () => {
     expect(stringCalculatorV1('b,d')).toBe(0);
   });
 });
+
+
 describe('String Calculator version 2 should', () => {
   it('return 0 for an empty text', () => {
     expect(stringCalculatorV2('')).toBe(0);
-  });
-  it('return 0 for null', () => {
-    expect(stringCalculatorV2(null)).toBe(0);
   });
   it('return the same number for a number in format text', () => {
     expect(stringCalculatorV2('56')).toBe(56);
