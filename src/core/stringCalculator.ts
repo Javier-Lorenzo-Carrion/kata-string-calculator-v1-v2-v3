@@ -14,6 +14,5 @@ export function stringCalculatorV1(text: string, separator: string = ','): numbe
 }
 
 export function stringCalculatorV2(text: string): number {
-  text = (text ?? '');
-  return Number(text);
+  return Number(text ?? '');
 }
