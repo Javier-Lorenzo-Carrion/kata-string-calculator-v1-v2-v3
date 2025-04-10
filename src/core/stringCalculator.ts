@@ -1,6 +1,6 @@
-export function stringCalculatorV1(text: string): number {
+export function stringCalculatorV1(text: string, separator: string = ','): number {
   if (text === '' || text === null) return 0;
-  if (text.includes(',')) {
+  if (text.includes(separator)) {
     text = text.replace(/[A-Za-z\W_]/g, '');
     let result: number = 0;
     for (let i: number = 0; i < text.length; i++) {
