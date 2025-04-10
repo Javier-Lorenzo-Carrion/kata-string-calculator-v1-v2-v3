@@ -31,4 +31,7 @@ describe('String Calculator version 2 should', () => {
   it('return 0 for an empty text', () => {
     expect(stringCalculatorV2('')).toBe(0);
   });
+  it('return 0 for null', () => {
+    expect(stringCalculatorV2(null)).toBe(0);
+  });
 });
