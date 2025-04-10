@@ -12,6 +12,11 @@ export function stringCalculatorV1(text: string, separator: string = ','): numbe
   }
   return Number(text);
 }
+
 export function stringCalculatorV2(text: string): number {
-  return 0;
+  try {
+    return Number(text.split(/\d/g).join(''));
+  } catch (e) {
+    return 0;
+  }
 }

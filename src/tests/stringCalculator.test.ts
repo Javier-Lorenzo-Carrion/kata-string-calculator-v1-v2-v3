@@ -34,4 +34,7 @@ describe('String Calculator version 2 should', () => {
   it('return 0 for null', () => {
     expect(stringCalculatorV2(null)).toBe(0);
   });
+  it('return the same number for a number in format text', () => {
+    expect(stringCalculatorV1('56')).toBe(56);
+  });
 });
