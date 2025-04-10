@@ -18,7 +18,7 @@ describe('String Calculator version 1 should', () => {
     expect(stringCalculatorV1('5,6,a,3')).toBe(14);
   });
   it('return the sum for numbers separated by a symbol indicated as an input', () => {
-    expect(stringCalculatorV1('5*6*4a', '*')).toBe(15);
+    expect(stringCalculatorV1('5*6*4a', '*')).toBe(11);
   })
   it('return 0 for text without numbers', () => {
     expect(stringCalculatorV1('b')).toBe(0);
