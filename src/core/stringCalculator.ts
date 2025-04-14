@@ -1,22 +1,48 @@
-export function stringCalculatorV1(text: string, separator: string = ','): number {
-  if (text === '' || text.match(/\d/g) === null) return 0;
+function textCanNotBeCalculated(text: string) {
+  const textIsEmpty = !text;
+  const textHasNoDigits = text.match(/\d/g) === null;
+  return textIsEmpty || textHasNoDigits;
+}
 
-  if (text.includes(separator)) {
-    const separatedText: string[] = text.split(separator);
-    let textResult: number = 0;
-    for (let i: number = 0; i < separatedText.length; i++) {
-      const itemIsNumber: number = Number(separatedText[i]);
-      if (itemIsNumber) textResult = textResult + itemIsNumber;
+function sumAllElementsOfText(text: string, separator: string) {
+  const elements: string[] = text.split(separator);
+  let result: number = 0;
+  for (const element of elements) {
+    const elementIsNumber: number = Number(element);
+    if (elementIsNumber) {
+      result += elementIsNumber;
     }
-    return textResult;
   }
-  return Number(text);
+  return result;
+}
+
+export function stringCalculatorV1(text: string, separator: string = ','): number {
+  if (textCanNotBeCalculated(text)) return 0;
+
+  const textOnlyHasOneDigit = !text.includes(separator);
+  if (textOnlyHasOneDigit) {
+    return Number(text);
+  }
+  return sumAllElementsOfText(text, separator);
+}
+
+function parseToNumber(eachChar: string) {
+  return Number(eachChar);
+}
+
+function isNumber(eachNumber: number) {
+  return !isNaN(eachNumber);
 }
 
 export function stringCalculatorV2(text: string, separator: string = ','): number {
-  return text
-    .split(separator)
-    .map((eachChar: string): number => Number(eachChar))
-    .filter((eachNumber: number): boolean => !isNaN(eachNumber))
-    .reduce((currentNumber: number, nextNumber: number) => currentNumber + nextNumber, 0);
+  return (
+    text
+      .split(separator)
+      .map(parseToNumber)
+      .filter(isNumber)
+      // en la función reduce tambien puedes hacer una abstraccion
+      .reduce((currentNumber: number, nextNumber: number) => currentNumber + nextNumber, 0)
+  );
 }
+
+// recursividad para la versión 3 piensa sobre ello y entregalo el lunes
