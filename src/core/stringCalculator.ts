@@ -44,7 +44,6 @@ export function stringCalculatorV2(text: string, separator: string = ','): numbe
 
 export function stringCalculatorV3(text: string, separator: string = ','): number {
 
-  if(text === '') return 0;
   const items = text.split(separator);
   let result = 0;
   for (const item of items) {
