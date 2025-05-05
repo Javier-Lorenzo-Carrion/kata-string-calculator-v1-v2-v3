@@ -70,4 +70,8 @@ describe('String Calculator version 3 should', () => {
     expect(stringCalculatorV3('5*6*,4a', '*')).toBe(11);
     expect(stringCalculatorV3('5*6*,4', '*')).toBe(11);
   });
+  it('return 0 for text without numbers', () => {
+    expect(stringCalculatorV3('b')).toBe(0);
+    expect(stringCalculatorV3('b,d')).toBe(0);
+  });
 });
