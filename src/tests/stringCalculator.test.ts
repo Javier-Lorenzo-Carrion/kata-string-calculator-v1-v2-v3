@@ -55,4 +55,10 @@ describe('String Calculator version 3 should', () => {
   it('return 0 for an empty text', () => {
     expect(stringCalculatorV3('')).toBe(0);
   });
+  it('return the same number for a number in format text', () => {
+    expect(stringCalculatorV3('56')).toBe(56);
+  });
+  it('return the sum for numbers separated by commas', () => {
+    expect(stringCalculatorV3('5,6')).toBe(11);
+  });
 });
