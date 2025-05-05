@@ -43,9 +43,12 @@ export function stringCalculatorV2(text: string, separator: string = ','): numbe
 }
 
 export function stringCalculatorV3(text: string, separator: string = ','): number {
-
   const items = text.split(separator);
   let result = 0;
-  for (const item of items) {Number(item) ? result += Number(item) : 0;}
+  for (const item of items) {
+    Number(item) ? (result += Number(item)) : 0;
+  }
   return result;
 }
+
+// TODO: hacer una version con recursividad
