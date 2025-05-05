@@ -46,10 +46,6 @@ export function stringCalculatorV3(text: string, separator: string = ','): numbe
 
   const items = text.split(separator);
   let result = 0;
-  for (const item of items) {
-    if(Number(item)){
-      result = result + Number(item);
-    }
-  }
+  for (const item of items) {Number(item) ? result += Number(item) : 0;}
   return result;
 }
