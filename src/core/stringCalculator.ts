@@ -35,14 +35,14 @@ function isNumber(eachNumber: number) {
 }
 
 export function stringCalculatorV2(text: string, separator: string = ','): number {
-  return (
-    text
-      .split(separator)
-      .map(parseToNumber)
-      .filter(isNumber)
-      // en la función reduce tambien puedes hacer una abstraccion
-      .reduce((currentNumber: number, nextNumber: number) => currentNumber + nextNumber, 0)
-  );
+  return text
+    .split(separator)
+    .map(parseToNumber)
+    .filter(isNumber)
+    .reduce((currentNumber: number, nextNumber: number) => currentNumber + nextNumber, 0);
 }
 
-// recursividad para la versión 3 piensa sobre ello y entregalo el lunes
+export function stringCalculatorV3(text: string, separator: string = ','): number {
+
+  return 0;
+}

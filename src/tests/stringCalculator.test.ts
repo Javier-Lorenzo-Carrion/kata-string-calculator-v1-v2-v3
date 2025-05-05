@@ -1,4 +1,4 @@
-import { stringCalculatorV1, stringCalculatorV2 } from '../core/stringCalculator';
+import { stringCalculatorV1, stringCalculatorV2, stringCalculatorV3 } from '../core/stringCalculator';
 
 describe('String Calculator version 1 should', () => {
   it('return 0 for an empty text', () => {
@@ -48,5 +48,11 @@ describe('String Calculator version 2 should', () => {
   it('return 0 for text without numbers', () => {
     expect(stringCalculatorV2('b')).toBe(0);
     expect(stringCalculatorV2('b,d')).toBe(0);
+  });
+});
+
+describe('String Calculator version 3 should', () => {
+  it('return 0 for an empty text', () => {
+    expect(stringCalculatorV3('')).toBe(0);
   });
 });
